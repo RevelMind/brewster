@@ -5,7 +5,7 @@
     "main": "index.js",
     "commands": [
         {
-            "usage": "help [cmd]",
+            "usage": "help [cmd] | ? [cmd]",
             "description": "Lists all of the installed Brewster commands and how to use them."
         }
     ]

@@ -9,7 +9,7 @@ let error = function(str) {
 
 module.exports = {
     onCommand: function(cmd, args) {
-        if(cmd.toLowerCase() == 'help') {
+        if(cmd.toLowerCase() == 'help' || cmd == '?') {
             if(args.length == 0) {
                 let packages = brewster.getPackages();
 
