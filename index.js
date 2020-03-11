@@ -55,11 +55,11 @@ brewster.getPackage = function(name) {
 }
 
 brewster.getPackages = function() {
-    let files = glob.sync('./packages/**').slice(1);
+    let files = glob.sync(path.join(__dirname, './packages/**')).slice(1);
     let packages = {};
 
     files.forEach((file) => {
-        if(fs.lstatSync(path.join(__dirname, file)).isDirectory()) {
+        if(fs.lstatSync(path.join(file)).isDirectory()) {
             packages[path.basename(file)] = brewster.getPackage(path.basename(file));
         }
     });

@@ -9,6 +9,6 @@
         "readline-sync": "^1.4.10"
     },
     "bin": {
-        "brewster": "./application/index.js"
+        "brewster": "./application/index"
     }
 }

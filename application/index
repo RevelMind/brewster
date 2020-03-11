@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 let colors = require('colors');
 let readline = require('readline-sync');
 let path = require('path');
