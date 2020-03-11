@@ -54,10 +54,14 @@ luna.getPackage = function(name) {
 }
 
 luna.getPackages = function() {
-    let files = glob.GlobSync('./packages');
+    let files = glob.sync('./packages/**').slice(1);
     let packages = {};
+    console.log(files);
     files.forEach((file) => {
-        packages[file] = luna.getPackage(file);
+        if(fs.lstatSync(path.join(__dirname, file)).isDirectory()) {
+            console.log('Pakcage!')
+            packages[path.basename(file)] = luna.getPackage(path.basename(file));
+        }
     });
 
     return packages;
