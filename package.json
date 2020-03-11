@@ -1,7 +1,7 @@
 {
     "name": "brewster",
-    "version": "1.0.3",
-    "description": "An extensible and modern virtual console.",
+    "version": "1.0.4",
+    "description": "An extensible and modern virtual console made with Javascript.",
     "main": "index.js",
     "dependencies": {
         "colors": "^1.4.0",
