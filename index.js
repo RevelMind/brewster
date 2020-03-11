@@ -2,6 +2,7 @@ let fs = require('fs');
 let path = require('path')
 let glob = require('glob');
 let colors = require('colors');
+let cwd = process.cwd();
 
 let error = function(str) {
     console.log('ERROR! '.red + str);
@@ -59,12 +60,19 @@ luna.getPackages = function() {
     console.log(files);
     files.forEach((file) => {
         if(fs.lstatSync(path.join(__dirname, file)).isDirectory()) {
-            console.log('Pakcage!')
             packages[path.basename(file)] = luna.getPackage(path.basename(file));
         }
     });
 
     return packages;
+}
+
+luna.getCWD = function() {
+    return cwd;
+}
+
+luna.setCWD = function(wd) {
+    cwd = wd;
 }
 
 module.exports = luna;
