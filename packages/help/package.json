@@ -5,8 +5,8 @@
     "main": "index.js",
     "commands": [
         {
-            "usage": "cd <directory>",
-            "description": "Changes the current directory."
+            "usage": "help [cmd]",
+            "description": "Lists all of the installed Brewster commands and how to use them."
         }
     ]
 }

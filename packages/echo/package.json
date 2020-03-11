@@ -2,5 +2,11 @@
     "name": "echo",
     "version": "1.0.1",
     "description": "The built in echo command for Brewster.",
-    "main": "index.js"
+    "main": "index.js",
+    "commands": [
+        {
+            "usage": "echo <text>",
+            "description": "Repeats the inputted text."
+        }
+    ]
 }

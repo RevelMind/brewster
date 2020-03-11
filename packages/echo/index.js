@@ -1,4 +1,3 @@
-let program = require('commander');
 let path = require('path')
 let config = require(path.join(__dirname, 'package.json'));
 
