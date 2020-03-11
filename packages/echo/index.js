@@ -1,6 +1,6 @@
 module.exports = {
     onCommand: function(cmd, args) {
-        if(cmd == "echo") {
+        if(cmd == 'echo') {
             console.log(args.join(" "));
         }
     }
