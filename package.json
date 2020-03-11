@@ -1,6 +1,6 @@
 {
     "name": "brewster",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "An extensible and modern virtual console.",
     "main": "index.js",
     "dependencies": {
@@ -9,6 +9,6 @@
         "readline-sync": "^1.4.10"
     },
     "bin": {
-        "brewster": "./application/index"
+        "brewster": "./application/brewster"
     }
 }
