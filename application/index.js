@@ -22,11 +22,27 @@ while(true) {
         error('Invalid command.');
     } else {
         let all = cmd.split(' ');
-        let cmdName = cmd[0];
+        let cmdName = all[0];
         let cmdArgs = [];
 
         if(all.length > 1) {
             cmdArgs = all.slice(1);
+        }
+
+        let packages = luna.getPackages();
+        let isCmd = false;
+        Object.keys(packages).forEach(function(package) {
+            package = packages[package];
+            if(package.package.onCommand !== undefined) {
+                let out = package.package.onCommand(cmdName, cmdArgs);
+                if(out == true) {
+                    isCmd = true;
+                }
+            }
+        });
+
+        if(isCmd == false) {
+            error('That command does not exist.');
         }
     }
 }

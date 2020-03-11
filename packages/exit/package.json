@@ -1,0 +1,6 @@
+{
+    "name": "exit",
+    "version": "1.0.0",
+    "description": "A way to quickly exit the Luna application.",
+    "main": "index.js"
+}

@@ -1,0 +1,6 @@
+{
+    "name": "cd",
+    "version": "1.0.0",
+    "description": "Set the cwd.",
+    "main": "index.js"
+}

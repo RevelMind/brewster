@@ -57,7 +57,7 @@ luna.getPackage = function(name) {
 luna.getPackages = function() {
     let files = glob.sync('./packages/**').slice(1);
     let packages = {};
-    console.log(files);
+    
     files.forEach((file) => {
         if(fs.lstatSync(path.join(__dirname, file)).isDirectory()) {
             packages[path.basename(file)] = luna.getPackage(path.basename(file));
