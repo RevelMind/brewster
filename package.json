@@ -1,0 +1,10 @@
+{
+    "name": "luna",
+    "version": "1.0.0",
+    "description": "An extensible and modern virtual console.",
+    "main": "index.js",
+    "dependencies": {
+        "colors": "^1.4.0",
+        "readline-sync": "^1.4.10"
+    }
+}
