@@ -10,9 +10,9 @@ let error = function(str) {
 }
 
 /* API */
-let luna = {};
+let brewster = {};
 
-luna.getPackage = function(name) {
+brewster.getPackage = function(name) {
     let package = {
         config: {},
         package: {}
@@ -54,25 +54,25 @@ luna.getPackage = function(name) {
     }
 }
 
-luna.getPackages = function() {
+brewster.getPackages = function() {
     let files = glob.sync('./packages/**').slice(1);
     let packages = {};
-    
+
     files.forEach((file) => {
         if(fs.lstatSync(path.join(__dirname, file)).isDirectory()) {
-            packages[path.basename(file)] = luna.getPackage(path.basename(file));
+            packages[path.basename(file)] = brewster.getPackage(path.basename(file));
         }
     });
 
     return packages;
 }
 
-luna.getCWD = function() {
+brewster.getCWD = function() {
     return cwd;
 }
 
-luna.setCWD = function(wd) {
+brewster.setCWD = function(wd) {
     cwd = wd;
 }
 
-module.exports = luna;
+module.exports = brewster;
