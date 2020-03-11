@@ -8,7 +8,7 @@ let error = function(str) {
 
 module.exports = {
     onCommand: function(cmd, args) {
-        if(cmd == 'cd') {
+        if(cmd.toLowerCase() == 'cd') {
             if(args.length == 1) {
                 if(path.isAbsolute(args[0])) {
                     let p = path.resolve(args[0]);
