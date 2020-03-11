@@ -5,6 +5,7 @@
     "main": "index.js",
     "dependencies": {
         "colors": "^1.4.0",
+        "glob": "^7.1.6",
         "readline-sync": "^1.4.10"
     }
 }
