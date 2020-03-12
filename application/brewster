@@ -32,19 +32,12 @@ while(true) {
         }
 
         let packages = brewster.getPackages();
-        let isCmd = false;
-        Object.keys(packages).forEach(function(package) {
-            package = packages[package];
-            if(package.package.onCommand !== undefined) {
-                let out = package.package.onCommand(cmdName, cmdArgs);
-                if(out == true) {
-                    isCmd = true;
-                }
-            }
-        });
+        let package = brewster.getPackage(cmdName);
 
-        if(isCmd == false) {
-            error('That command does not exist.');
+        if(package) {
+            if(package.package.onCommand) {
+                package.package.onCommand(cmdArgs);
+            }
         }
     }
 }

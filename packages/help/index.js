@@ -8,33 +8,30 @@ let error = function(str) {
 }
 
 module.exports = {
-    onCommand: function(cmd, args) {
-        if(cmd.toLowerCase() == 'help' || cmd == '?') {
-            if(args.length == 0) {
-                let packages = brewster.getPackages();
+    onCommand: function(args) {
+        if(args.length == 0) {
+            let packages = brewster.getPackages();
 
-                Object.keys(packages).forEach((name) => {
-                    let package = packages[name];
-                    let config = package.config;
+            Object.keys(packages).forEach((name) => {
+                let package = packages[name];
+                let config = package.config;
 
-                    if(config.commands !== undefined) {
-                        config.commands.forEach((command) => {
-                            if(command.usage !== undefined) {
-                                if(command.description !== undefined) {
-                                    console.log(command.usage.green + ' - ' + command.description);
-                                } else {
-                                    console.log(command.usage.green);
-                                }
+                if(config.commands !== undefined) {
+                    config.commands.forEach((command) => {
+                        if(command.usage !== undefined) {
+                            if(command.description !== undefined) {
+                                console.log(command.usage.green + ' - ' + command.description);
                             } else {
-                                error(config.name + ' : No usage defined for command.')
+                                console.log(command.usage.green);
                             }
-                        });
-                    }
-                });
-            }
-
-            return true;
+                        } else {
+                            error(config.name + ' : No usage defined for command.')
+                        }
+                    });
+                }
+            });
         }
-        return false;
+
+        return true;
     }
 }

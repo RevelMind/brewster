@@ -46,11 +46,7 @@ brewster.getPackage = function(name) {
 
                 return package;
             }
-        } else {
-            error('A \'package.json\' file does not exist for the ' + name + ' package.');
         }
-    } else {
-        error('Package \'' + name + '\' does not exist.');
     }
 }
 
