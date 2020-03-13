@@ -26,7 +26,7 @@ module.exports = {
                                     console.log(command.usage.green);
                                 }
                             } else {
-                                error(config.name + ' : No usage defined for command.')
+                                error(config.name + ' : No usage defined for command.');
                             }
                         });
                     }

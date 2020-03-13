@@ -6,7 +6,7 @@ let cwd = process.cwd();
 
 let error = function(str) {
     console.log('ERROR! '.red + str);
-    process.exit(1);
+    //process.exit(1);
 }
 
 /* API */
@@ -52,6 +52,8 @@ brewster.getPackage = function(name) {
     } else {
         error('Package \'' + name + '\' does not exist.');
     }
+
+    return false;
 }
 
 brewster.getPackages = function() {
