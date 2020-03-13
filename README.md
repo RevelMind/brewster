@@ -1,5 +1,5 @@
 # Brewster
-Brewster is a multi-platform command line utility for all computer users. &nbsp;👍 It's still in development, features are likely flawed, buggy or just don't exist.  If you have something to add, create an issue [here](https://github.com/RevelMind/brewster/issues/new)
+Brewster is a multi-platform command line utility for all computer users. &nbsp;👍 It's still in development, features are likely flawed, buggy or just don't exist.  If you have something to add, create an issue [here](https://github.com/RevelMind/brewster/issues/new).
 
 ## Installation and Usage
 You can install Brewster with the command line if you have NPM installed;
