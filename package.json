@@ -1,6 +1,6 @@
 {
     "name": "brewster",
-    "version": "1.1.8",
+    "version": "1.1.9",
     "description": "An extensible and modern virtual console made with Javascript.",
     "main": "index.js",
     "dependencies": {
@@ -10,5 +10,12 @@
     },
     "bin": {
         "brewster": "./application/brewster"
-    }
+    },
+    "keywords": [
+        "terminal",
+        "console",
+        "command line",
+        "cli",
+        "api"
+    ]
 }
