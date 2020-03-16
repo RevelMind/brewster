@@ -4,7 +4,7 @@ let colors = require('colors');
 let readline = require('readline-sync');
 let path = require('path');
 let fs = require('fs');
-let release = false;
+let release = true;
 let brewster = require('../index');
 
 let error = function(str) {
