@@ -1,0 +1,12 @@
+{
+    "name": "package",
+    "version": "1.0.0",
+    "description": "Package viewer.",
+    "main": "index.js",
+    "commands": [
+        {
+            "usage": "package",
+            "description": "Lists all of the installed Brewster packages.."
+        }
+    ]
+}
