@@ -1,7 +1,7 @@
 {
     "name": "mkdir",
     "version": "1.0.0",
-    "description": "Creates a new directory.",
+    "description": "A utility for making directories.",
     "main": "index.js",
     "commands": [
         {
