@@ -1,0 +1,12 @@
+{
+    "name": "mkdir",
+    "version": "1.0.0",
+    "description": "Creates a new directory.",
+    "main": "index.js",
+    "commands": [
+        {
+            "usage": "mkdir <name>",
+            "description": "Creates a new folder."
+        }
+    ]
+}
